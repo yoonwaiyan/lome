@@ -1,0 +1,18 @@
+<div class="author">
+{{#author}}
+		{{#if image}}
+			<div class="author-image">
+				<a href="{{url}}">
+					<img src="{{image}}"></img>
+				</a>
+			</div>
+		{{/if}}
+	
+		<div class="author-description">
+			<a href="{{url}}">{{name}}</a>
+			<a href="{{website}}">{{website}}</a>
+	    <p class="author-bio center">{{bio}}</p>
+		</div>
+	{{/author}}
+</div>
+<div class="clear"></div>

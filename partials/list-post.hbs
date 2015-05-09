@@ -1,0 +1,36 @@
+{{! This partial will list a post excerpt using the 'excerpt' theme helper in Ghost }}
+<main id="main" class="twelvecol first clearfix" role="main">
+    <article class="post hentry post_box {{post_class}}">
+
+        {{#if image}}
+            <section class="post-cover">
+                <a href="{{url}}">
+                    <img class="post-image" src="{{image}}" alt="">
+                </a>
+            </section>
+        {{/if}}
+        <section class="post-main">
+            <time class="updated post-timestamp" datetime="2012-05-03">
+                {{date published_at format="MMMM DD, YYYY"}}
+            </time>
+
+            <header class="h2 entry-title">
+                <a href="{{url}}" rel="bookmark">{{title}}</a>
+            </header>
+
+            <section class="entry-content clearfix">
+                {{excerpt}}...
+            </section>
+        </section>
+
+        <section class="post-footer">
+            {{#if tags}}
+                <span class="tags-title"><i class="fa fa-tags"></i> {{tags}}</span>
+            {{else}}
+                <span class="no-tag"></span>
+            {{/if}}
+            <a class="read-more" href="{{url}}"><i class="fa fa-angle-right"></i></a>
+        </section>
+
+    </article> <!-- end list article  -->
+</main>
